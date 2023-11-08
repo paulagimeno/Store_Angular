@@ -1,0 +1,27 @@
+<h2>Register</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="save()">
+
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+    </mat-form-field>
+
+
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+    </mat-form-field>
+
+    <div>
+        <mat-checkbox formControlName="isOwner">Are you a professional profile (owner)?</mat-checkbox>
+    </div>
+    <button mat-fab extended type="submit" [disabled]="userForm.invalid">
+        Enviar
+    </button>
+</form>
