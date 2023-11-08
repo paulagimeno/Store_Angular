@@ -1,0 +1,11 @@
+<h2>PRODUCT LIST ALL</h2>
+
+<button class="btn" (click)="findAll()">Products</button>
+
+<ul>
+    <li *ngFor="let product of products">
+        <span [ngClass]="product">
+            {{product.title}} {{product.price}} {{product.description}} {{product.category}} {{product.image}}
+        </span>
+    </li>
+</ul>
