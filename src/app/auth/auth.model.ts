@@ -1,8 +1,10 @@
 export interface User {
-    id: number | undefined;
+    id: number;
     email: string;
     username: string;
     password: string;
-    name: string;
-    phone: number | undefined;
+    name: {
+        firstname: string;
+        lastname: string;
+    };
 }

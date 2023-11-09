@@ -1,0 +1,15 @@
+<h2>User Details</h2>
+
+<div *ngIf="user">
+    <ul>
+        <li>Email: {{ user.email }}</li>
+        <li>Username: {{ user.username }}</li>
+        <li>
+            Name:
+            <ul>
+                <li>First Name: {{ user.name.firstname }}</li>
+                <li>Last Name: {{ user.name.lastname }}</li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import * as jwt_decode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode'; 
 import { BASE_URL, TOKEN } from '../shared/constants';
+import { User } from './auth.model';
 
 export interface Token {
     sub: number; // id del usuario
@@ -14,10 +15,9 @@ export interface Token {
 }
 
 @Injectable({
-    providedIn: 'root'
+    providedIn: 'root',
 })
 export class AuthService {
-
     url: string = `${BASE_URL}/auth`;
 
     isAdmin = new BehaviorSubject<boolean>(this.hasAdminToken());
@@ -25,10 +25,9 @@ export class AuthService {
     isLoggedIn = new BehaviorSubject<boolean>(this.hasToken());
     currentUserName = new BehaviorSubject<string>(this.getCurrentUserName());
 
-    constructor(
-        private httpClient: HttpClient,
-        private router: Router
-    ) { }
+    private apiUrl = 'https://fakestoreapi.com/users'; 
+
+    constructor(private httpClient: HttpClient, private router: Router) { }
 
     login(login: any): Observable<any> {
         return this.httpClient.post(`${this.url}/login`, login);
@@ -48,12 +47,12 @@ export class AuthService {
     }
 
     getCurrentUserName(): string {
-        let token = localStorage.getItem(TOKEN);
+        let token = localStorage.getItem('token');
         if (!token) return '';
 
         let decoded_token: Token | undefined;
         try {
-            decoded_token = jwt_decode(token);
+            decoded_token = jwtDecode(token) as Token; // Asegúrate de que la interfaz Token sea correcta
         } catch (error) {
             console.error('Error decoding token:', error);
             return '';
@@ -67,7 +66,7 @@ export class AuthService {
 
         let decoded_token: Token | undefined;
         try {
-            decoded_token = jwt_decode(token);
+            decoded_token = jwtDecode(token) as Token;
         } catch (error) {
             console.error('Error decoding token:', error);
             return false;
@@ -93,7 +92,7 @@ export class AuthService {
         localStorage.setItem(TOKEN, token);
         let decoded_token: Token | undefined;
         try {
-            decoded_token = jwt_decode(token);
+            decoded_token = jwtDecode(token) as Token;
         } catch (error) {
             console.error('Error decoding token:', error);
         }
@@ -105,5 +104,9 @@ export class AuthService {
             this.currentUserName.next(decoded_token.username);
         }
     }
+
+    findById(id: number): Observable<User> {
+      return this.httpClient.get<User>(`${this.apiUrl}/${id}`);
+    }
 }
 
