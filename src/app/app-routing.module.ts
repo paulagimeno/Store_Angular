@@ -24,6 +24,7 @@ const routes: Routes = [
     path: '**', redirectTo: '/product-edit', pathMatch: 'full'
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
