@@ -6,22 +6,12 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 
 const routes: Routes = [
   {
-    path: '', 
-    component: ProductListComponent
+    path: 'products',
+    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) // lazy loading
   },
   {
-    path: 'product-edit',
-    component: ProductEditComponent
-  }, 
-  {
-    path: 'product-detail',
-    component: ProductDetailComponent
-  },
-  {
-    path: '*', redirectTo: '/product-list', pathMatch: 'full'
-  },
-  {
-    path: '**', redirectTo: '/product-edit', pathMatch: 'full'
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) // lazy loading
   }
 ];
 

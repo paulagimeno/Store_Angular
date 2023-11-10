@@ -1,11 +1,18 @@
 <nav>
   <a routerLink="/">Products List</a>
-  <a routerLink="/product-edit">Product edit</a>
-  <a routerLink="/product-detail">Product detail</a>
+  <a routerLink="/product-edit/:id">Product edit</a>
+  <a routerLink="/product-detail/:id">Product detail</a>
+  <a routerLink="/register">Register</a> 
+  <a routerLink="/login">Login</a>
+  <a routerLink="/user-detail/:id">UserDetail</a>
 </nav>
 
-
-<router-outlet></router-outlet>
+<main class="content">
+  <div class="container">
+    <h1 *ngIf="username">👋¡Hi, {{username}}! Welcome to our Store</h1>
+    <router-outlet></router-outlet>
+  </div>
+</main>
 
 <footer>
   Copyright 2023

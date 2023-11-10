@@ -32,7 +32,7 @@ export class LoginComponent {
       // Guardar el token para utilizarlo en las posteriores peticiones
       this.authService.handleLoginResponse(data.token);
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/products']);
     });
 
   }
