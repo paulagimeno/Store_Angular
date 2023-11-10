@@ -3,7 +3,7 @@
 <button class="btn" (click)="findAll()">Products</button>
 
 <ul>
-    <li *ngFor="let product of products">
+    <li *ngFor="let product of products"  (click)="navigateToDetails(product)">
         <span [ngClass]="product">
             {{product.title}} {{product.price}} {{product.description}} {{product.category}} {{product.image}}
         </span>

@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
   userForm = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
 
@@ -23,13 +23,13 @@ export class LoginComponent {
   save() {
 
     let login = {
-      email: this.userForm.get('email')?.value ?? '',
+      username: this.userForm.get('username')?.value ?? '',
       password: this.userForm.get('password')?.value ?? ''
     }
 
     this.authService.login(login).subscribe(data => {
       console.log(data.token);
-      // Guardar el token para utilizarlo en las posteriores peticiones
+     
       this.authService.handleLoginResponse(data.token);
 
       this.router.navigate(['/products']);
