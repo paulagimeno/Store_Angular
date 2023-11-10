@@ -18,7 +18,7 @@ export interface Token {
     providedIn: 'root',
 })
 export class AuthService {
-    url: string = `${BASE_URL}`;
+    url: string = `${BASE_URL}/auth`;
 
     isAdmin = new BehaviorSubject<boolean>(this.hasAdminToken());
     isOwner = new BehaviorSubject<boolean>(this.hasOwnerToken());
@@ -27,10 +27,13 @@ export class AuthService {
 
     private apiUrl = 'https://fakestoreapi.com/users'; 
 
+    private newUrl = 'https://fakestoreapi.com/auth';
+
     constructor(private httpClient: HttpClient, private router: Router) { }
 
     login(login: any): Observable<any> {
-        return this.httpClient.post(`${this.url}/login`, login);
+        console.log('holiwis')
+        return this.httpClient.post(`${this.newUrl}/login`, login);
     }
 
     register(user: any): Observable<any> {
@@ -39,7 +42,7 @@ export class AuthService {
 
     logout() {
         localStorage.removeItem(TOKEN);
-        this.router.navigate(['/login']);
+        this.router.navigate(['/auth/login']);
         this.isAdmin.next(false);
         this.isOwner.next(false);
         this.isLoggedIn.next(false);
@@ -109,6 +112,6 @@ export class AuthService {
 
     findById(id: number): Observable<User> {
       return this.httpClient.get<User>(`${this.apiUrl}/${id}`);
-    }
+  }
 }
 
