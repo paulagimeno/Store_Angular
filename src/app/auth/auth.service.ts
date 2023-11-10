@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { jwtDecode } from 'jwt-decode'; 
+import { jwtDecode } from 'jwt-decode';
 import { BASE_URL, TOKEN } from '../shared/constants';
 import { User } from './auth.model';
 
@@ -25,7 +25,7 @@ export class AuthService {
     isLoggedIn = new BehaviorSubject<boolean>(this.hasToken());
     currentUserName = new BehaviorSubject<string>(this.getCurrentUserName());
 
-    private apiUrl = 'https://fakestoreapi.com/users'; 
+    private apiUrl = 'https://fakestoreapi.com/users';
 
     private newUrl = 'https://fakestoreapi.com/auth';
 
@@ -111,7 +111,7 @@ export class AuthService {
     }
 
     findById(id: number): Observable<User> {
-      return this.httpClient.get<User>(`${this.apiUrl}/${id}`);
-  }
+        return this.httpClient.get<User>(`${this.apiUrl}/${id}`);
+    }
 }
 
