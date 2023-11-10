@@ -27,7 +27,4 @@ export class ProductService {
     return this.httpClient.put<Product>(`${this.apiUrl}/${product.id}`, product);
   }
 
-  delete(id: number): void {
-    this.httpClient.delete(`${this.apiUrl}/${id}`);
-  }
 }

@@ -18,7 +18,7 @@ export interface Token {
     providedIn: 'root',
 })
 export class AuthService {
-    url: string = `${BASE_URL}/auth`;
+    url: string = `${BASE_URL}`;
 
     isAdmin = new BehaviorSubject<boolean>(this.hasAdminToken());
     isOwner = new BehaviorSubject<boolean>(this.hasOwnerToken());
@@ -39,7 +39,7 @@ export class AuthService {
 
     logout() {
         localStorage.removeItem(TOKEN);
-        this.router.navigate(['/auth/login']);
+        this.router.navigate(['/login']);
         this.isAdmin.next(false);
         this.isOwner.next(false);
         this.isLoggedIn.next(false);
@@ -89,7 +89,9 @@ export class AuthService {
     }
 
     handleLoginResponse(token: any) {
+        console.log('holita')
         localStorage.setItem(TOKEN, token);
+        console.log(TOKEN)
         let decoded_token: Token | undefined;
         try {
             decoded_token = jwtDecode(token) as Token;

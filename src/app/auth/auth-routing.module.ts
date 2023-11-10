@@ -14,11 +14,8 @@ const routes: Routes = [
       component: RegisterComponent
   },
   {
-      path: 'user-detail',
+      path: 'user-detail/:id',
       component: UserDetailComponent
-  },
-  {
-      path: '**', redirectTo: 'login', pathMatch: 'full'
   }
 ];
 
