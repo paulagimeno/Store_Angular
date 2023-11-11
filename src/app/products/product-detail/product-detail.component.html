@@ -1,9 +1,11 @@
-<h2>Product details</h2>
-
-<div *ngIf="product">
-    <p>{{product.title}}</p>
-    <p>Price: {{product.price}}</p>
-    <p>Description: {{product.description}}</p>
-    <p>Category: {{product.category}}</p>
-    <img src={{product.image}} alt="foto"/>
+<div class="pDetail_item"*ngIf="product">
+    <div class="pDetail_indiv">
+    <img class="pDetail_img" src={{product.image}} alt="foto"/>
+    <div class="pDetail_info">
+    <p class="pDetail_title">{{product.title}}</p>
+    <p class="pDetail_desc">{{product.description}}</p>
+    <p class="pDetail_category">{{product.category}}</p>
+    <p class="pDetail_price">{{product.price}}€</p>
+    </div>
+    </div>
 </div>

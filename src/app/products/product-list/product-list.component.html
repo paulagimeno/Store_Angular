@@ -1,11 +1,15 @@
-<h2>PRODUCT LIST ALL</h2>
+<!-- <button class="btn" (click)="findAll()">Products</button> -->
 
-<button class="btn" (click)="findAll()">Products</button>
-
-<ul>
+<ul class="list_indiv">
     <li *ngFor="let product of products"  (click)="navigateToDetails(product)">
         <span [ngClass]="product">
-            {{product.title}} {{product.price}} {{product.description}} {{product.category}} {{product.image}}
+            <div class="list_item">
+            <img class="list_img" src={{product.image}} alt="foto"/>
+            <div class="list_info">
+            <p class="list_title">{{product.title}}</p>
+            <p class="list_price">Price: {{product.price}}€</p>
+            </div>
+            </div>
         </span>
     </li>
 </ul>

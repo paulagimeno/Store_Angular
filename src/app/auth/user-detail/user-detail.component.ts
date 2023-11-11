@@ -16,11 +16,12 @@ export class UserDetailComponent {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      const id = parseInt(params['id'],10);
-    this.authService.findById(id).subscribe(data => this.user = data);
-
+      // const id = parseInt(params['id'],10);
+      const id = localStorage.getItem('user_id')
+      if (id !== null){
+    this.authService.findById(parseInt(id, 10)).subscribe(data => this.user = data);
+    }
   });
-
     };
   }
 
