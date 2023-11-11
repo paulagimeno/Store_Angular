@@ -1,0 +1,45 @@
+.list_title {
+  color: rgb(175, 0, 152);
+  font-size: 2vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 3vh;
+  cursor: pointer;
+}
+
+.list_price {
+  font-weight: bolder;
+  font-size: 1.5vw;
+}
+
+.list_img {
+  width: 200px;
+  height: 300px;
+  border-style: solid;
+  border-color: rgb(175, 0, 152);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+  height: 350px;
+  padding: 20px;
+  border-bottom-style: solid;
+  border-color: black;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list_info {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 2vw;
+}
+
+.list_indiv {
+  padding-top: 2vh;
+}/*# sourceMappingURL=product-list.component.css.map */

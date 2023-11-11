@@ -32,7 +32,6 @@ export class AuthService {
     constructor(private httpClient: HttpClient, private router: Router) { }
 
     login(login: any): Observable<any> {
-        console.log('holiwis')
         return this.httpClient.post(`${this.newUrl}/login`, login);
     }
 
@@ -42,6 +41,7 @@ export class AuthService {
 
     logout() {
         localStorage.removeItem(TOKEN);
+        localStorage.removeItem('user_id');
         this.router.navigate(['/auth/login']);
         this.isAdmin.next(false);
         this.isOwner.next(false);
@@ -92,7 +92,6 @@ export class AuthService {
     }
 
     handleLoginResponse(token: any) {
-        console.log('holita')
         localStorage.setItem(TOKEN, token);
         console.log(TOKEN)
         let decoded_token: Token | undefined;
@@ -101,10 +100,9 @@ export class AuthService {
         } catch (error) {
             console.error('Error decoding token:', error);
         }
-
         if (decoded_token) {
-            this.isAdmin.next(decoded_token.role === 'admin');
-            this.isOwner.next(decoded_token.role === 'owner');
+            console.info('decoded_token! (:')
+            localStorage.setItem('user_id', decoded_token.sub.toString()) //the user id is saved on the sub attribute of the decoded token
             this.isLoggedIn.next(true);
             this.currentUserName.next(decoded_token.username);
         }
