@@ -1,16 +1,17 @@
 .user-details-list {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: left;
     flex-direction: column;
     height: auto;
     margin-left: 150px;
     text-align: left;
+    height: 90vh;
 
     img {
         margin-bottom: 10px;
-        width: 200px; 
-        height: 200px; 
+        width: 150px; 
+        height: 150px; 
         border-radius: 50%; 
         margin: 20px;
     }
@@ -26,16 +27,17 @@
     border-radius: 5px;
     background-color: pink;
     width: 500px;
+    height: 10vh;
     margin-bottom: 10px;
 
     //Name
     .user-name {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: bold;
     }
 
     .user-name-api {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-left: 20px;
 
     }
@@ -43,18 +45,17 @@
     .user-name,
     .user-name-api {
         color: rgb(255, 255, 255);
-        padding: 5px;
         width: 250px;
     }
 
     //Lastname
     .user-lastname {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: bold;
     }
 
     .user-lastname-api {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-left: 20px;
 
     }
@@ -62,18 +63,18 @@
     .user-lastname,
     .user-lastname-api {
         color: rgb(255, 255, 255);
-        padding: 5px;
+      
         width: 250px;
     }
 
     //Email
     .user-email {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: bold;
     }
 
     .user-email-api {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-left: 20px;
 
     }
@@ -81,18 +82,18 @@
     .user-email,
     .user-email-api {
         color: rgb(255, 255, 255);
-        padding: 5px;
+        
         width: 250px;
     }
 
     //Username
     .user-username {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: bold;
     }
 
     .user-username-api {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-left: 20px;
 
     }
@@ -100,7 +101,7 @@
     .user-username,
     .user-username-api {
         color: rgb(255, 255, 255);
-        padding: 5px;
+      
         width: 250px;
     }
 }

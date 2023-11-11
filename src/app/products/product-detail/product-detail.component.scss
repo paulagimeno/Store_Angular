@@ -11,7 +11,6 @@
     display: flex;
     flex-direction: row;
     height: 90vh;
-    background-color: pink;
     align-items: center;
 }
 .pDetail_info{
@@ -20,6 +19,7 @@
     justify-content: space-around;
     padding-top: 3vh;
     padding-left: 3vw;
+    width: 40vw;
 }
 .pDetail_title{
     font-size: 2vw;
@@ -34,7 +34,7 @@
     font-weight: 700;
 }
 .pDetail_desc{
-    width: 40vw;
+    
 }
 .pDetail_category{
     background-color: rgb(253, 233, 236);
@@ -42,4 +42,15 @@
     width:fit-content;
     padding-left: 2vw;
     padding-right: 2vw;
+}
+.pDetail_editDiv{
+    display: flex;
+    align-items: flex-end;
+}
+.pDetail_edit{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    color: rgb(175, 0, 152);
+    background-color: pink;
 }
