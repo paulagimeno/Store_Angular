@@ -18,7 +18,7 @@ export class LoginComponent {
   constructor(
     private authService: AuthService,
     private router: Router
-    ) {}
+  ) { }
 
   save() {
 
@@ -29,7 +29,7 @@ export class LoginComponent {
 
     this.authService.login(login).subscribe(data => {
       console.log(data.token);
-     
+
       this.authService.handleLoginResponse(data.token);
 
       this.router.navigate(['/products']);

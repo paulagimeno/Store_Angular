@@ -1,1 +1,3 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"register.component.css"}
+
+{"version":3,"sources":["register.component.scss","register.component.css"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,kBAAA;ACCJ;;ADEA;EACI,gBAAA;EACA,YAAA;ACCJ;;ADEA;EACI,WAAA;EACA,mBAAA;ACCJ;;ADEA;;EAEI,WAAA;ACCJ;;ADEA;EACI,sBAAA;EACA,YAAA;EACA,WAAA;ACCJ;;ADEA;EACI,yBAAA;ACCJ;;ADEA;EACI,YAAA;ACCJ;;ADEA;EACI,mBAAA;ACCJ","file":"register.component.css"}
+
