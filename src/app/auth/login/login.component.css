@@ -1,0 +1,30 @@
+
+h2 {
+  color: pink;
+  text-align: center;
+}
+
+form {
+  max-width: 300px;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  background-color: pink;
+  color: white;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ff66b2;
+}/*# sourceMappingURL=login.component.css.map */
+

@@ -1,0 +1,19 @@
+<h2>Log In</h2>
+
+<form [formGroup]="userForm" (ngSubmit)="save()">
+
+    <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName="username">
+    </mat-form-field>
+
+
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+    </mat-form-field>
+
+    <button mat-fab extended type="submit" [disabled]="userForm.invalid">
+        Send
+    </button>
+</form> 

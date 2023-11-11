@@ -1,0 +1,34 @@
+<div class="all">
+    <div class="create">
+<h2>Create Product</h2>
+<p>Product title</p>
+<input type="text" [(ngModel)]="title"/>
+<p>Product price</p>
+<input type="number" [(ngModel)]="price"/>
+<p>Product description</p>
+<input type="text" [(ngModel)]="description"/>
+<p>Product category</p>
+<input type="text" [(ngModel)]="category"/>
+<p>Product image</p>
+<input type="text" [(ngModel)]="image"/>
+<button (click)="create()">Crear</button>
+
+<div *ngIf="createdProduct">
+    Your product was successfully created with the id: {{createdProduct.id}}
+</div>
+</div>
+<div class="edit">
+<h2>Update Product</h2>
+<p>Edit title</p>
+<input type="text" [(ngModel)]="titleToUpdate"/>
+<p>Edit price</p>
+<input type="number" [(ngModel)]="priceToUpdate"/>
+<p>Edit description</p>
+<input type="text" [(ngModel)]="descriptionToUpdate"/>
+<p>Edit category</p>
+<input type="text" [(ngModel)]="categoryToUpdate"/>
+<p>Edit image</p>
+<input type="text" [(ngModel)]="imageToUpdate"/>
+<button (click)="update()">Update</button>
+</div>
+</div>

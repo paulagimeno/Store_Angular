@@ -1,0 +1,15 @@
+<div class="pDetail_item"*ngIf="product">
+    <div class="pDetail_indiv">
+    <img class="pDetail_img" src={{product.image}} alt="foto"/>
+    <div class="pDetail_info">
+    <p class="pDetail_title">{{product.title}}</p>
+    <p class="pDetail_desc">{{product.description}}</p>
+    <p class="pDetail_category">{{product.category}}</p>
+    <p class="pDetail_price">{{product.price}}€</p>
+    </div>
+    <div class="pDetail_editDiv">
+        <button class="pDetail_edit" (click)="navigateToDetails(product)">Edit</button>
+    </div>
+    </div>
+    
+</div>

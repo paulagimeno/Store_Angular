@@ -1,0 +1,33 @@
+
+<div class="user-details-card" *ngIf="user">
+    
+    <div class="user-details-list">
+        <img class="userAvatar" src="https://res.cloudinary.com/dizd9f3ky/image/upload/v1697206175/imageMale_mqwzhf.png" alt="user">
+
+        <div class="box">
+            <p class="user-name">Name </p>
+            <p class="user-name-api">{{ user.name.firstname }}</p>
+        </div>
+
+        <div class="box">
+            <p class="user-lastname">Lastname </p>
+            <p class="user-lastname-api">{{ user.name.lastname }}</p>
+        </div>
+
+        <div class="box">
+            <p class="user-email">Email </p>
+            <p class="user-email-api">{{ user.email }}</p>
+        </div>
+
+        <div class="box">
+            <p class="user-username">Username </p>
+            <p class="user-username-api">{{ user.username }}</p>
+        </div>
+
+        <button>Edit info</button>
+    </div>                      
+</div>
+
+
+
+

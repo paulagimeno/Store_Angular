@@ -1,0 +1,15 @@
+<!-- <button class="btn" (click)="findAll()">Products</button> -->
+
+<ul class="list_indiv">
+    <li *ngFor="let product of products"  (click)="navigateToDetails(product)">
+        <span [ngClass]="product">
+            <div class="list_item">
+            <img class="list_img" src={{product.image}} alt="foto"/>
+            <div class="list_info">
+            <p class="list_title">{{product.title}}</p>
+            <p class="list_price">Price: {{product.price}}€</p>
+            </div>
+            </div>
+        </span>
+    </li>
+</ul>

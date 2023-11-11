@@ -1,0 +1,104 @@
+
+.user-details-list {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  height: auto;
+  margin-left: 150px;
+  text-align: left;
+}
+.user-details-list img {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
+.user-details-list h2 {
+  color: pink;
+  font-size: 2em;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: pink;
+  width: 500px;
+  margin-bottom: 10px;
+}
+.box .user-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.box .user-name-api {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.box .user-name,
+.box .user-name-api {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 250px;
+}
+.box .user-lastname {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.box .user-lastname-api {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.box .user-lastname,
+.box .user-lastname-api {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 250px;
+}
+.box .user-email {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.box .user-email-api {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.box .user-email,
+.box .user-email-api {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 250px;
+}
+.box .user-username {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.box .user-username-api {
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+.box .user-username,
+.box .user-username-api {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  width: 250px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  background-color: pink;
+  text-align: center;
+  cursor: pointer;
+  width: 150px;
+  font-size: 1.3em;
+  border-radius: 15px;
+  margin-left: 350px;
+}
+
+button:hover {
+  opacity: 0.7;
+}/*# sourceMappingURL=user-detail.component.css.map */
+

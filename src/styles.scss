@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; cursor: default;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*{
+    list-style: none;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, white, pink); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
